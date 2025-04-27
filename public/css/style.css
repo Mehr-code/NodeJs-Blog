@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap");
+/* استایل کلی */
+body {
+  margin: 0;
+  font-family: "Vazirmatn", sans-serif;
+  background: #f9f9f9;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  flex-wrap: wrap;
+}
+
+.header__logo {
+  font-family: "Vazirmatn", sans-serif;
+  font-weight: 800;
+  font-size: 1.8rem;
+  background: linear-gradient(90deg, #0274cf, #00c6ff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+  letter-spacing: -0.5px;
+}
+
+.header__nav {
+  display: flex;
+}
+
+.header__nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.header__nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.header__nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #0274cf;
+  transition: width 0.3s;
+}
+
+.header__nav a:hover {
+  color: #0274cf;
+}
+
+.header__nav a:hover::after {
+  width: 100%;
+}
+
+.header__button .searchbtn {
+  background-color: #0274cf;
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.3s;
+}
+
+.header__button .searchbtn:hover {
+  background-color: #025ca1;
+}
+
+/* دکمه منوی موبایل */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* واکنش‌گرایی */
+@media (max-width: 768px) {
+  .header__nav {
+    width: 100%;
+    order: 3;
+    display: none;
+  }
+
+  .header__nav.active {
+    display: block;
+  }
+
+  .header__nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .header__button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    order: 2;
+  }
+
+  .menu-toggle {
+    display: block;
+    color: #0274cf;
+  }
+}
+
+/* ریست اولیه */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Vazirmatn", "Tahoma", sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+/* بخش Hero */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 50px;
+  flex-flow: row-reverse;
+  padding: 5rem 0;
+}
+
+.author {
+  text-align: center;
+}
+
+.author__heading {
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.author__body {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* تصویر */
+.hero-img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* بخش مقالات */
+.articles {
+  margin-top: 50px;
+}
+
+.article__heading {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #222;
+}
+
+.article-ul {
+  list-style: none;
+  padding: 0;
+}
+
+.article-ul li {
+  background: #fff;
+  margin-bottom: 15px;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
+}
+
+.article-ul li:hover {
+  transform: translateY(-5px);
+}
+
+.article-ul a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.article-list__date {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* دکمه صفحه‌بندی */
+.pagination {
+  display: inline-block;
+  margin-top: 20px;
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.pagination:hover {
+  text-decoration: underline;
+}
+
+/* واکنش‌گرا */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .author__heading {
+    font-size: 2rem;
+  }
+
+  .author__body {
+    font-size: 1rem;
+  }
+
+  .article__heading {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-img {
+    max-width: 300px;
+  }
+
+  .author__heading {
+    font-size: 1.5rem;
+  }
+}
