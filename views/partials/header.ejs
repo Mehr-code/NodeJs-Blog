@@ -1,16 +1,41 @@
 <header class="header">
-  <a href="/" class="header__logo">Mehr Node.js</a>
+  <div class="container">
+    <a href="/" class="logo"
+      ><img src="/img/logo.png" alt="Mehran Logo" width="170" height="70"
+    /></a>
 
-  <nav class="header__nav" id="nav-menu">
-    <ul>
-      <li><a href="/">خانه</a></li>
-      <li><a href="/about">درباره ی من</a></li>
-      <li><a href="/contact">تماس با من</a></li>
-    </ul>
-  </nav>
+    <nav class="navbar" data-navbar>
+      <div class="navbar-top">
+        <a href="#" class="logo"
+          ><img src="/img/logo.png" width="119" height="37" alt="Mehran logo"
+        /></a>
 
-  <div class="header__button">
-    <button class="searchbtn">
+        <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+          <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+        </button>
+      </div>
+      <ul class="navbar-list">
+        <li>
+          <a href="/" class="navbar-link hover-1" data-nav-toggler>خانه</a>
+        </li>
+        <li>
+          <a href="/about" class="navbar-link hover-1" data-nav-toggler
+            >درباره ی من</a
+          >
+        </li>
+        <li>
+          <a href="/contact" class="navbar-link hover-1" data-nav-toggler
+            >تماس با من</a
+          >
+        </li>
+      </ul>
+      <p class="copyright-text">
+        Copyright 2025 © Mehr_code - Personal Blog. Developed by Node.js & HTML
+        CSS JS
+      </p>
+    </nav>
+
+    <button class="btn btn-primary">
       جستجو
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -44,18 +69,14 @@
         </g>
       </svg>
     </button>
+
+    <button
+      class="nav-open-btn"
+      aria-label="open menu"
+      data-nav-toggler
+      style="margin-left: 9rem"
+    >
+      <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+    </button>
   </div>
-
-  <!-- آیکون منوی موبایل -->
-  <button class="menu-toggle" id="menu-toggle" aria-label="باز و بسته کردن منو">
-    ☰
-  </button>
 </header>
-<script>
-  const menuToggle = document.getElementById("menu-toggle");
-  const navMenu = document.getElementById("nav-menu");
-
-  menuToggle.addEventListener("click", () => {
-    navMenu.classList.toggle("active");
-  });
-</script>
